@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PickACardUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Losowanie kart" Height="300" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listOfCards" Grid.Column="1" Grid.RowSpan="2" Margin="20" FontSize="20"/>
+        <Button Content="Losuj karty" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="20" Click="Button_Click" />
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Label x:Name="label" Content="Ile kart wylosować?" FontSize="20"/>
+            <Slider x:Name="numberOfCards" Minimum="1" Maximum="15" Foreground="Black" IsSnapToTickEnabled="True" TickPlacement="BottomRight" AutoToolTipPlacement="TopLeft"/>
+        </StackPanel>
 
     </Grid>
 </Window>
